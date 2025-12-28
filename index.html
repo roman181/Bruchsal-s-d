@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Street Trader Bruchsal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Street Trader Bruchsal</h1>
+    <div class="stats">
+      <span>Tag: <strong id="day">1</strong></span>
+      <span>Ort: <strong id="currentLocation">Südstadt</strong></span>
+      <span>Cash: <strong id="cash">2000</strong> €</span>
+      <span>Schulden: <strong id="debt">1000</strong> €</span>
+      <span>Ruf: <strong id="reputation">0</strong></span>
+      <span>Inventar: <strong id="invCount">0</strong> / <strong id="invMax">20</strong></span>
+      <span>Heat: <strong id="heat">0</strong> %</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Ort</h2>
+      <img id="locationImage" class="location-img" src="img/suedstadt.jpg" alt="Aktueller Ort">
+      <div id="locationButtons"></div>
+      <button class="btn btn-secondary" id="nextDayBtn">Nächster Tag</button>
+    </section>
+
+    <section class="panel">
+      <h2>Waren</h2>
+      <table id="goodsTable"></table>
+    </section>
+
+    <section class="panel">
+      <h2>Aktionen</h2>
+      <div class="actions-group">
+        <button class="btn" id="upgradeBagBtn">Rucksack Upgrade (500 €)</button>
+        <button class="btn" id="repayDebtBtn">Schulden tilgen (100 €)</button>
+        <button class="btn btn-secondary" id="npcDealerBtn">Mit Händler reden</button>
+        <button class="btn btn-secondary" id="npcInformantBtn">Mit Informant reden</button>
+      </div>
+      <h3>Shop</h3>
+      <div id="shop"></div>
+      <h3>Speichern</h3>
+      <button class="btn" id="saveBtn">Speichern</button>
+      <button class="btn" id="loadBtn">Laden</button>
+      <button class="btn btn-danger" id="endGameBtn">Spiel beenden</button>
+      <p id="endMessage"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Nachrichten & Story</h2>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
